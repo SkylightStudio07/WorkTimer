@@ -10,7 +10,7 @@ set(wxWidgets_ROOT_DIR "C:/wxWidgets-3.2.4" CACHE PATH "wxWidgets root directory
 # Release=mswu / Debug=mswud
 set(wxWidgets_CONFIGURATION mswu)
 
-find_package(wxWidgets REQUIRED COMPONENTS core base adv)
+find_package(wxWidgets REQUIRED COMPONENTS core base adv qa)
 include(${wxWidgets_USE_FILE})
 
 set(SOURCES src/main.cpp)

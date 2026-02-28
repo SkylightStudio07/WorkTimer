@@ -1,7 +1,14 @@
+// resources/app.rc
+// Windows 리소스 파일 - 아이콘 및 버전 정보
+
 #include <windows.h>
 
+// ── 아이콘 ───────────────────────────────────────────────────
+// app.ico 파일을 resources 폴더에 넣어주세요
+// (없으면 이 줄을 주석 처리하세요)
 IDI_ICON1 ICON "app.ico"
 
+// ── 버전 정보 ────────────────────────────────────────────────
 VS_VERSION_INFO VERSIONINFO
 FILEVERSION     1,0,0,0
 PRODUCTVERSION  1,0,0,0
@@ -16,7 +23,7 @@ BEGIN
         BLOCK "041204b0"
         BEGIN
             VALUE "CompanyName",      "WorkTimer"
-            VALUE "FileDescription",  "Work Timer"
+            VALUE "FileDescription",  "작업 시간 타이머"
             VALUE "FileVersion",      "1.0.0.0"
             VALUE "InternalName",     "WorkTimer"
             VALUE "LegalCopyright",   "2024"
@@ -27,6 +34,27 @@ BEGIN
     END
     BLOCK "VarFileInfo"
     BEGIN
-        VALUE "Translation", 0x0412, 1200
+        VALUE "Translation", 0x0412, 1200   // 한국어
     END
+END
+
+// ── 앱 매니페스트 (DPI 인식, 비주얼 스타일) ──────────────────
+1 RT_MANIFEST
+BEGIN
+    "<?xml version=""1.0"" encoding=""UTF-8"" standalone=""yes""?>"
+    "<assembly xmlns=""urn:schemas-microsoft-com:asm.v1"" manifestVersion=""1.0"">"
+    "<assemblyIdentity version=""1.0.0.0"" processorArchitecture=""*"" name=""WorkTimer"" type=""win32""/>"
+    "<description>Work Timer Application</description>"
+    "<dependency>"
+        "<dependentAssembly>"
+            "<assemblyIdentity type=""win32"" name=""Microsoft.Windows.Common-Controls"" version=""6.0.0.0"" processorArchitecture=""*"" publicKeyToken=""6595b64144ccf1df"" language=""*""/>"
+        "</dependentAssembly>"
+    "</dependency>"
+    "<application xmlns=""urn:schemas-microsoft-com:asm.v3"">"
+        "<windowsSettings>"
+            "<dpiAware xmlns=""http://schemas.microsoft.com/SMI/2005/WindowsSettings"">true</dpiAware>"
+            "<dpiAwareness xmlns=""http://schemas.microsoft.com/SMI/2016/WindowsSettings"">PerMonitorV2</dpiAwareness>"
+        "</windowsSettings>"
+    "</application>"
+    "</assembly>"
 END

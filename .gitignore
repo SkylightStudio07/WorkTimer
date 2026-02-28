@@ -1,41 +1,76 @@
-# Prerequisites
-*.d
+# Visual Studio 빌드 출력
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+out/
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Visual Studio 캐시/옵션 파일
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vcxproj.user
+*.vcxproj.filters
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
+# 빌드 결과물
 *.exe
-*.out
-*.app
+*.dll
+*.pdb
+*.ilk
+*.obj
+*.iobj
+*.ipdb
+*.res
+*.tlog
+*.log
+*.lastbuildstate
 
-# debug information files
-*.dwo
+# CMake
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+Makefile
+install_manifest.txt
+compile_commands.json
+
+# 사용자 설정 파일 (중요!)
+*.ini
+*.config
+work_timer.ini
+
+# 임시 파일
+*.tmp
+*.temp
+*.cache
+*.swp
+*~
+*.bak
+*.orig
+
+# 컴파일러 생성 파일
+*.pch
+*.ipch
+*.idb
+*.pgc
+*.pgd
+
+# IntelliSense
+*.VC.db
+*.VC.VC.opendb
+*.VC.db-shm
+*.VC.db-wal
+
+# 테스트 결과
+[Tt]est[Rr]esult*/
+*.trx
+
+# NuGet
+packages/
+*.nupkg
